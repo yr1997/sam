@@ -1,0 +1,30 @@
+<h1>Listing Whatsnews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>題名</th>
+      <th>本文</th>
+      <th>作成日</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for whats_new <- @whatsnews do %>
+    <tr>
+      <td><%= whats_new.題名 %></td>
+      <td><%= whats_new.本文 %></td>
+      <td><%= whats_new.作成日 %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.whats_new_path(@conn, :show, whats_new) %></span>
+        <span><%= link "Edit", to: Routes.whats_new_path(@conn, :edit, whats_new) %></span>
+        <span><%= link "Delete", to: Routes.whats_new_path(@conn, :delete, whats_new), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Whats new", to: Routes.whats_new_path(@conn, :new) %></span>

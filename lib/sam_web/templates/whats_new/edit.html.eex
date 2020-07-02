@@ -1,0 +1,5 @@
+<h1>Edit Whats new</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.whats_new_path(@conn, :update, @whats_new)) %>
+
+<span><%= link "Back", to: Routes.whats_new_path(@conn, :index) %></span>

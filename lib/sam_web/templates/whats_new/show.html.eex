@@ -1,0 +1,23 @@
+<h1>Show Whats new</h1>
+
+<ul>
+
+  <li>
+    <strong>題名:</strong>
+    <%= @whats_new.題名 %>
+  </li>
+
+  <li>
+    <strong>本文:</strong>
+    <%= @whats_new.本文 %>
+  </li>
+
+  <li>
+    <strong>作成日:</strong>
+    <%= @whats_new.作成日 %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.whats_new_path(@conn, :edit, @whats_new) %></span>
+<span><%= link "Back", to: Routes.whats_new_path(@conn, :index) %></span>
