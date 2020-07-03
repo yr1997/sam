@@ -18,10 +18,10 @@ defmodule SamWeb.Router do
   end
 
   scope "/", SamWeb do
-    pipe_through :browser
+    pipe_through [:browser, :require_authenticated_user]
     
     resources "/whatsnews", WhatsNewController
-    
+
     live "/", PageLive, :index
 
     live "/posts", PostLive.Index, :index
