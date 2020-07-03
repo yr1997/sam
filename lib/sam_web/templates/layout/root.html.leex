@@ -13,16 +13,9 @@
     <header>
       <section class="container">
         <nav role="navigation">
-          <ul>
-            
 
-              <li><a href="https://pofo.gigalixirapp.com/posts">Posts</a></li>
-
-
-          </ul>
           <ul>
             <li><%= link "Posts", to: Routes.post_index_path(@conn, :index) %></li>
-
           </ul>
           <%= render "_user_menu.html", assigns %>
         </nav>
